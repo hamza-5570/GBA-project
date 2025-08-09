@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solliciteren</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solliciteren</title>
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-
-  <!-- Topbar -->
-  <div class="topbar">
-    <p>Join our team - <span>Vacature Incidentbestrijder</span></p>
-  </div>
-  <!-- Navbar -->
-  <header class="navbar">
+  <body>
+    <!-- Topbar -->
+    <div class="topbar">
+      <p>Join our team - <span>Vacature Incidentbestrijder</span></p>
+    </div>
+    <!-- Navbar -->
+    <header class="navbar">
       <div class="container">
         <!-- Left: Logo -->
         <div class="logo">
@@ -33,7 +34,7 @@
         <nav class="nav-links">
           <a href="index.html">Home</a>
           <a href="over-ons.html">Over ons</a>
-          <a href="Specialismes.html">Specialismes</a>
+          <a href="specialismes.html">Specialismes</a>
           <a href="werken-bij-green.html" class="werken">
             Werken bij <img src="assets/red-dot.png" alt="Icon" />
           </a>
@@ -42,88 +43,102 @@
       </div>
     </header>
 
-  <!-- form section -->
+    <!-- form section -->
 
-  <div class="container-form-new">
-    <!-- Left Section: Form -->
-    <div class="form-section-new">
-      <h2 class="h2-new">Solliciteren</h2>
-      <p class="p-new">Het team GBA komt graag met u in contact.</p>
+    <div class="container-form-new">
+      <!-- Left Section: Form -->
+      <div class="form-section-new">
+        <h2 class="h2-new">Solliciteren</h2>
+        <p class="p-new">Het team GBA komt graag met u in contact.</p>
 
-      <form class="form-new">
-        <div class="row-new">
-          <div class="field-new">
-            <label>Voornaam<span class="colour-star">*</span></label>
-            <input type="text" placeholder="Rian">
+        <form class="form-new">
+          <div class="row-new">
+            <div class="field-new">
+              <label>Voornaam<span class="colour-star">*</span></label>
+              <input type="text" placeholder="Rian" />
+            </div>
+            <div class="field-new">
+              <label>Achternaam<span class="colour-star">*</span></label>
+              <input type="text" placeholder="Ouwerdijk" />
+            </div>
           </div>
+
           <div class="field-new">
-            <label>Achternaam<span class="colour-star">*</span></label>
-            <input type="text" placeholder="Ouwerdijk">
+            <label>Email*</label>
+            <input type="email" placeholder="jouw@email.com" />
           </div>
-        </div>
 
-        <div class="field-new">
-          <label>Email*</label>
-          <input type="email" placeholder="jouw@email.com">
-        </div>
+          <div class="field-new">
+            <label>Telefoon*</label>
+            <input type="text" placeholder="" aria-label="Open menu" />
+          </div>
 
-        <div class="field-new">
-          <label>Telefoon*</label>
-          <input type="text" placeholder=""  aria-label="Open menu">
-        </div>
+          <div class="field-new">
+            <label>Toelichting*</label>
+            <textarea placeholder="Bericht"></textarea>
+          </div>
+          <!-- ................ -->
+          <div class="new-field">
+            <label>Upload je CV*</label>
+            <p>
+              Upload je cv met een overzicht van je werkervaring en opleidingen.
+              Zo krijgen we een goed beeld van jouw professionele achtergrond en
+              vaardigheden.
+            </p>
+            <label class="file-upload">
+              <img src="assets/link-icon.svg" alt="icon" />
+              Kies bestand
+              <input type="file" />
+            </label>
+          </div>
 
-        <div class="field-new">
-          <label>Toelichting*</label>
-          <textarea placeholder="Bericht"></textarea>
-        </div>
-<!-- ................ -->
-        <div class="new-field">
-    <label>Upload je CV*</label>
-    <p>Upload je cv met een overzicht van je werkervaring en opleidingen. Zo krijgen we een goed beeld van jouw professionele achtergrond en vaardigheden.</p>
-    <label class="file-upload">
-      <img src="assets/link-icon.svg" alt="icon">
-      Kies bestand
-      <input type="file" />
-    </label>
-  </div>
+          <div class="new-field">
+            <label>Upload je motivatiebrief*</label>
+            <p>
+              Upload een duidelijke motivatiebrief waarin je uitlegt waarom jij
+              geschikt bent voor deze functie en wat jou drijft. Hiermee geef je
+              ons een compleet beeld van wie je bent en wat je te bieden hebt!
+            </p>
+            <label class="file-upload">
+              <img src="assets/link-icon.svg" alt="icon" />
+              Kies bestand
+              <input type="file" />
+            </label>
+          </div>
+          <!-- ..................... -->
+          <div class="checkbox-container">
+            <input type="checkbox" id="agree-new" />
+            <label for="agree-new">
+              Ik geef toestemming voor het gebruik van mijn persoonsgegevens om
+              contact met mij op te nemen; ik ga akkoord met het privacybeleid.*
+            </label>
+          </div>
 
-  <div class="new-field">
-    <label>Upload je motivatiebrief*</label>
-    <p>Upload een duidelijke motivatiebrief waarin je uitlegt waarom jij geschikt bent voor deze functie en wat jou drijft. Hiermee geef je ons een compleet beeld van wie je bent en wat je te bieden hebt!</p>
-    <label class="file-upload">
-      <img src="assets/link-icon.svg" alt="icon">
-      Kies bestand
-      <input type="file" />
-    </label>
-  </div>
-<!-- ..................... -->
-        <div class="checkbox-container">
-          <input type="checkbox" id="agree-new">
-          <label for="agree-new">
-            Ik geef toestemming voor het gebruik van mijn persoonsgegevens om contact met mij op te nemen; ik ga akkoord
-            met het privacybeleid.*
-          </label>
-        </div>
-
-
-        <button type="submit" class="btn-new">Solliciteren</button>
-      </form>
-    </div>
-
-    <!-- Right Section: Info -->
-    <div class="info-section-new">
-      <div class="right-text-new">
-        <h2 class="h2-new">Vragen?</h2>
-        <p class="p-new">Heb je vragen over de sollicitatieprocedure of over werken bij GBA? Neem gerust contact met ons
-          op via [e-mailadres] of [telefoonnummer]. We helpen je graag verder!</p>
-        <button class="right-btn-new">Contact opnemen</button>
+          <button type="submit" class="btn-new">Solliciteren</button>
+        </form>
       </div>
-      <img src="assets/solliciteren-img.jpg" alt="GBA Patch" class="image-new">
-    </div>
-  </div>
 
-  <!-- Footer Section -->
-  <footer class="site-footer">
+      <!-- Right Section: Info -->
+      <div class="info-section-new">
+        <div class="right-text-new">
+          <h2 class="h2-new">Vragen?</h2>
+          <p class="p-new">
+            Heb je vragen over de sollicitatieprocedure of over werken bij GBA?
+            Neem gerust contact met ons op via [e-mailadres] of
+            [telefoonnummer]. We helpen je graag verder!
+          </p>
+          <button class="right-btn-new">Contact opnemen</button>
+        </div>
+        <img
+          src="assets/solliciteren-img.jpg"
+          alt="GBA Patch"
+          class="image-new"
+        />
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
       <div class="main-footer">
         <div class="footer-top">
           <div class="footer-up">
@@ -176,7 +191,5 @@
         </div>
       </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
