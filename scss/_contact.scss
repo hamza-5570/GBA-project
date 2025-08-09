@@ -1,0 +1,534 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Clash Grotesk", sans-serif;
+}
+
+/* topbar styling */
+.topbar {
+  background-color: #f4f5f6;
+  
+  p {
+    padding: 5px 0;
+    font-weight: 500;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+/* form section */
+.container-form {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 90px;
+  padding: 60px 0;
+}
+
+.left-form {
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 21px;
+    font-weight: 400;
+    color: #333;
+  }
+
+  .phone-form {
+    color: #d45027 !important;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  gap: 15px;
+}
+
+.row-form {
+  display: flex;
+  gap: 10px;
+
+  .field-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.field-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 100%;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+textarea {
+  resize: vertical;
+  height: 70px;
+  border-radius: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+  cursor: pointer;
+  
+  label {
+    font-size: 13px;
+  }
+
+  /* Hide native checkbox */
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Label with space for custom circle */
+  label {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  /* Circle outline */
+  label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #e9542c;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  /* Centered checkmark */
+  input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #e9542c;
+    font-size: 12px;
+    pointer-events: none;
+  }
+}
+
+button {
+  padding: 10px;
+  background-color: #d45027;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #c03f1f;
+  }
+}
+
+.last-para {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 60px;
+}
+
+.last-star {
+  color: #c03f1f;
+  font-size: 18px;
+  margin-right: 2px;
+}
+
+/* map section*/
+.responsive-map {
+    width: 100%;
+    height: 60vh;
+    border: 0;
+  }
+
+/* -----------------------------
+   MOBILE: up to 639px
+------------------------------ */
+@media (max-width: 639px) {
+  /* topbar */
+  .topbar p {
+    font-size: 10px;
+  }
+
+  /* form section */
+  .container-form {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 30px 0;
+    width: 95%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .left-form {
+    h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .phone-form {
+      color: #d45027;
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: none;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .row-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .field-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  input,
+  textarea {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    border-radius: 10px;
+  }
+
+  .checkbox-form {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 400;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .input-check {
+    margin-top: 3px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #d45027;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .last-para {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  .last-star {
+    color: #c03f1f;
+    font-size: 16px;
+    margin-right: 2px;
+  }
+
+}
+
+/* -----------------------------
+   TABLETS: 640px to 767px
+------------------------------ */
+@media (min-width: 640px) and (max-width: 767px) {
+  .main-footer {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  /* form section */
+  .container-form {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 0px;
+    width: 95%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .left-form {
+    h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .phone-form {
+      color: #d45027;
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: none;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .row-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .field-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    border-radius: 10px;
+  }
+
+  .checkbox-form {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 400;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .input-check {
+    margin-top: 3px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #d45027;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .last-para {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  .last-star {
+    color: #c03f1f;
+    font-size: 16px;
+    margin-right: 2px;
+  }
+}
+
+/* -----------------------------
+   SMALL LAPTOPS: 768px to 1023px
+------------------------------ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-footer {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  /* form section */
+  .container-form {
+    flex-direction: row;
+    padding: 50px 0px;
+    width: 95%;
+    margin: 0 auto;
+    gap: 60px;
+  }
+
+  .left-form {
+    flex: 1;
+  }
+
+  form {
+    flex: 2;
+    max-width: none;
+  }
+
+  .left-form {
+    h2 {
+      font-size: 24px;
+    }
+
+    img {
+      max-width: 250px;
+    }
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1024px to 1279px
+------------------------------ */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /* form section */
+  .container-form {
+    padding: 60px 0px;
+    gap: 70px;
+  }
+
+  .left-form {
+    img {
+      max-width: 280px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  form {
+    max-width: 600px;
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1280px..........
+------------------------------ */
+@media (min-width: 1280px) {
+  .topbar {
+    padding: 4px 0;
+    
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 1380px) and (max-width: 4000px) {
+  .container-form {
+    width: 1340px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1380px) {
+  .container-form {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+}

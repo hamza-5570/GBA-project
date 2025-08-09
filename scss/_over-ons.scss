@@ -1,0 +1,1042 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Clash Grotesk", sans-serif;
+}
+
+/* image section */
+.img img {
+  width: 100%;
+}
+
+/* Hero Section over ons*/
+.ons-hero {
+  background: url("../assets/over-ons-hero-bg.jpg") no-repeat center center/cover;
+  position: relative;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  
+  &-content {
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-weight: 400;
+      color: #1a1b1b;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+/* flex secton over ons */
+.osection-container {
+  padding: 60px 0;
+
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+}
+
+.oflex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.otext-column {
+  flex: 1;
+  min-width: 100px;
+  
+  p {
+    color: #1a1b1b;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+}
+
+.oimage-row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 30px;
+  overflow: hidden;
+  width: 100%;
+  
+  img {
+    flex: 1;
+    max-width: calc(50% - 7.5px);
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+/* special and slider section */
+.ons-special-section {
+  background-color: #f4f5f6;
+}
+
+.ons-special-div {
+  position: relative;
+  padding: 60px 0;
+}
+
+.ons-bg-image {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 100%;
+  height: 45%;
+  max-width: 250px;
+  z-index: 0;
+}
+
+.ons-top-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 70px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.ons-left {
+  grid-column: span 6;
+  
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  
+  .ons-para {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+  
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+}
+
+.ons-special-btn {
+  padding: 8px 16px;
+  border: 1px solid #e74c3c;
+  border-radius: 20px;
+  color: #e74c3c;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  
+  &:hover {
+    background-color: #e74c3c;
+    color: white;
+  }
+}
+
+.ons-right {
+  align-self: center;
+  grid-column: span 6;
+  position: relative;
+  z-index: 1;
+  
+  ul {
+    list-style: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    line-height: 20px;
+  }
+}
+
+.ons-icon {
+  color: green;
+  align-self: flex-start;
+  font-size: 16px;
+}
+
+/* bottom slider */
+.ons-container-slider {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.ons-logo-slider-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  cursor: grab;
+  margin: 0 auto 60px;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  
+  &:hover {
+    .ons-logo-track {
+      animation-play-state: paused;
+    }
+  }
+  
+  &.grabbing {
+    cursor: grabbing;
+    
+    .ons-logo-track {
+      animation-play-state: paused;
+    }
+  }
+}
+
+.ons-logo-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 20s linear infinite;
+  will-change: transform;
+  padding: 20px 0;
+  
+  img {
+    height: 40px;
+    width: auto;
+    margin: 0 30px;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    flex-shrink: 0;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* content container */
+.content-cont {
+  padding: 40px 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Slide */
+.slide {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+  
+  img {
+    width: 100%;
+    height: 92vh;
+    display: block;
+  }
+}
+
+/* Slider dots */
+.slider-dots {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #e8e9ea;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  
+  &.active {
+    background-color: #d75633;
+  }
+}
+
+/* -----------------------------
+   MOBILE: up to 639px
+------------------------------ */
+@media (max-width: 639px) {
+  /*over ons Hero Section */
+  .ons-hero {
+    padding: 50px 0;
+    height: auto;
+    
+    &-content {
+      width: 95%;
+      margin: 0 auto;
+      text-align: center;
+      
+      h1 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+      
+      p {
+        font-size: 11px;
+        line-height: 1.4;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  /* flex section over ons */
+  .osection-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 40px 0 !important;
+    
+    h2 {
+      font-weight: 300;
+      color: #282d2e;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .oflex-container {
+    gap: 12px;
+  }
+
+  .otext-column {
+    flex: 1 1 100%;
+    min-width: 0;
+    
+    p {
+      color: #595d5e;
+      font-size: 12px;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .oimage-row {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    
+    img {
+      max-width: none;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /* special and slider section */
+  .ons-special-div {
+    padding: 40px 0 !important;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .ons-top-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .ons-left, .ons-right {
+    width: 100% !important;
+    grid-column: span 12 !important;
+    
+    h2 {
+      font-size: 20px !important;
+      margin-bottom: 12px !important;
+    }
+    
+    .ons-para {
+      font-size: 15px;
+    }
+    
+    p {
+      font-size: 13px !important;
+      margin-bottom: 16px !important;
+      line-height: 1.5 !important;
+    }
+  }
+
+  .ons-special-btn {
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+  }
+
+  .ons-right ul {
+    font-size: 13px !important;
+    padding-left: 0 !important;
+  }
+
+  .ons-icon {
+    font-size: 14px !important;
+    margin-right: 8px !important;
+  }
+
+  .ons-bg-image {
+    display: none !important;
+  }
+  
+  /* bottom slider */
+  .ons-container-slider {
+    padding: 0 0 !important;
+  }
+
+  .ons-logo-slider-wrapper {
+    margin: 0 auto 30px;
+    max-width: 100%;
+  }
+
+  .ons-logo-track {
+    padding: 20 0 0 0;
+    
+    img {
+      height: 40px;
+      margin: 0 15px;
+    }
+  }
+
+  /* content container */
+  .main-slide {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .content-cont {
+    padding: 20px 0;
+    text-align: center;
+    
+    h2 {
+      font-size: 24px;
+    }
+    
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  }
+
+  .big-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* -----------------------------
+   TABLETS: 640px to 767px
+------------------------------ */
+@media (min-width: 640px) and (max-width: 767px) {
+  /*over ons Hero Section */
+  .ons-hero {
+    &-content {
+      h1 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+      
+      p {
+        font-size: 11px;
+        line-height: 1.4;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  /* flex section over ons */
+  .osection-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 50px 0 !important;
+    
+    h2 {
+      font-size: 19px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .otext-column p {
+    font-size: 12.5px;
+    line-height: 21px;
+  }
+
+  .oimage-row {
+    flex-direction: row;
+    
+    img {
+      max-width: calc(50% - 6px);
+      height: 150px;
+    }
+  }
+
+  /* special and slider section */
+  .ons-special-section {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .ons-special-div {
+    padding: 50px 0 25px 0 !important;
+  }
+
+  .ons-top-content {
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 40px !important;
+    margin-bottom: 35px !important;
+  }
+
+  .ons-left, .ons-right {
+    grid-column: span 6 !important;
+  }
+
+  .ons-left {
+    h2 {
+      font-size: 22px !important;
+    }
+    
+    .ons-para {
+      font-size: 15px;
+    }
+    
+    p {
+      font-size: 13.5px !important;
+      line-height: 1.5 !important;
+    }
+  }
+
+  .ons-bg-image {
+    max-width: 180px !important;
+    height: 40% !important;
+    top: 30px !important;
+  }
+  
+  /* bottom slider */
+  .ons-container-slider {
+    padding: 0 0 !important;
+  }
+
+  .ons-logo-slider-wrapper {
+    margin: 0 auto 45px;
+    max-width: 100%;
+  }
+
+  .ons-logo-track {
+    padding: 20 0 0 0;
+    
+    img {
+      height: 50px;
+      margin: 0 20px;
+    }
+  }
+
+  .main-slide {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  /* content container */
+  .content-cont {
+    h2 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+    
+    p {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+/* -----------------------------
+   SMALL LAPTOPS: 768px to 1023px
+------------------------------ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /*over ons Hero Section */
+  .ons-hero-content {
+    width: 95%;
+    margin: 0 auto;
+    
+    h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      width: 600px;
+    }
+  }
+
+  /* flex section over ons */
+  .osection-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 55px 0 !important;
+    
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  .otext-column {
+    flex: 1 1 calc(50% - 15px);
+    
+    p {
+      font-size: 13px;
+      line-height: 22px;
+    }
+  }
+
+  .oimage-row {
+    margin-top: 25px;
+    
+    img {
+      height: 180px;
+    }
+  }
+
+  /* special and slider section */
+  .ons-special-div {
+    padding: 55px 0 !important;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .ons-top-content {
+    grid-template-columns: repeat(12, 1fr) !important;
+    gap: 50px !important;
+  }
+
+  .ons-left {
+    grid-column: span 6 !important;
+    
+    h2 {
+      font-size: 23px !important;
+    }
+    
+    .ons-para {
+      font-size: 16px;
+    }
+    
+    p {
+      font-size: 14px !important;
+      line-height: 1.55 !important;
+    }
+  }
+
+  .ons-right {
+    grid-column: span 6 !important;
+    
+    ul {
+      font-size: 14px !important;
+    }
+  }
+
+  .ons-bg-image {
+    max-width: 220px !important;
+    height: 42% !important;
+    top: 35px !important;
+  }
+
+  .ons-icon {
+    font-size: 14px !important;
+  }
+  
+  /* bottom slider */
+  .ons-container-slider {
+    padding: 0 0 !important;
+  }
+
+  .ons-logo-slider-wrapper {
+    margin: 0 auto 50px;
+  }
+  
+  .ons-logo-track {
+    padding: 20 0 0 0;
+    
+    img {
+      height: 55px;
+      margin: 0 25px;
+    }
+  }
+
+  /* content container */
+  .main-slide {
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  .content-cont {
+    padding: 35px 0;
+    
+    h2 {
+      font-size: 26px;
+    }
+    
+    p {
+      font-size: 16;
+    }
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1024px to 1279px
+------------------------------ */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /*over ons Hero Section */
+  .ons-hero-content {
+    h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+    
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+  }
+
+  /* flex section over ons */
+  .osection-container {
+    padding: 60px 0 !important;
+    
+    h2 {
+      font-size: 21px;
+    }
+  }
+
+  .otext-column p {
+    font-size: 16px;
+  }
+
+  .oimage-row img {
+    height: 200px;
+  }
+
+  /* special and slider section */
+  .ons-special-div {
+    padding: 60px 0 30px 0 !important;
+  }
+
+  .ons-top-content {
+    gap: 60px !important;
+  }
+
+  .ons-left {
+    grid-column: span 6 !important;
+    
+    h2 {
+      font-size: 24px !important;
+    }
+    
+    .ons-para {
+      font-size: 18px;
+    }
+    
+    p {
+      font-size: 15px !important;
+      line-height: 1.4 !important;
+    }
+  }
+
+  .ons-right {
+    grid-column: span 6 !important;
+    
+    ul {
+      font-size: 15px !important;
+    }
+  }
+
+  .ons-bg-image {
+    max-width: 250px !important;
+    height: 45% !important;
+    top: 40px !important;
+  }
+  
+  .ons-special-btn {
+    font-size: 18px;
+    padding: 8px 16px !important;
+  }
+
+  .ons-icon {
+    font-size: 16px !important;
+  }
+  
+  /* bottom slider */
+  .ons-container-slider {
+    padding: 0 0 !important;
+  }
+
+  .ons-logo-slider-wrapper {
+    max-width: 100%;
+  }
+  
+  .ons-logo-track {
+    padding: 20 0 0 0;
+    
+    img {
+      height: 58px;
+    }
+  }
+
+  /* content container */
+  .content-cont {
+    padding: 40px 0;
+    
+    h2 {
+      font-size: 27;
+    }
+    
+    p {
+      font-size: 17;
+    }
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1280px.......
+------------------------------ */
+@media (min-width: 1280px) {
+  /*over ons Hero Section */
+  .ons-hero-content {
+    h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+    
+    p {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+  }
+
+  /* flex section over ons */
+  .osection-container {
+    padding: 65px 0 !important;
+    
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .otext-column p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .oimage-row img {
+    height: 100%;
+  }
+
+  /* special and slider section */
+  .ons-special-div {
+    padding: 65px 0 !important;
+  }
+
+  .ons-top-content {
+    gap: 65px !important;
+  }
+
+  .ons-bg-image {
+    max-width: 280px !important;
+    height: 48% !important;
+    top: 45px !important;
+  }
+
+  .ons-left {
+    h2 {
+      font-size: 30px !important;
+    }
+    
+    .ons-para {
+      font-size: 21px;
+    }
+    
+    p {
+      font-size: 18px !important;
+    }
+  }
+
+  .ons-icon {
+    font-size: 20px;
+  }
+
+  .ons-special-btn {
+    font-size: 21px;
+    padding: 8px 36px !important;
+  }
+
+  .ons-right ul {
+    font-size: 18px !important;
+  }
+  
+  /* bottom slider */
+  .ons-container-slider {
+    padding: 0 0 !important;
+  }
+
+  .ons-logo-slider-wrapper {
+    max-width: 100%;
+  }
+  
+  .ons-logo-track {
+    padding: 20 0 0 0;
+    
+    img {
+      height: 60px;
+    }
+  }
+
+  /* content container */
+  .content-cont {
+    padding: 40px 0;
+    
+    h2 {
+      font-size: 30px;
+    }
+    
+    p {
+      font-size: 18px;
+    }
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 6px;
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1536px to 2559px
+------------------------------ */
+
+/* -----------------------------
+   4K SCREENS: 2560px and above
+------------------------------ */
+
+@media (min-width: 1380px) and (max-width: 4000px) {
+  .ons-hero-content {
+    width: 1340px;
+    margin: 0 auto;
+    
+    h1 {
+      font-size: 48px !important;
+    }
+    
+    p {
+      width: 800px;
+      font-size: 21px !important;
+    }
+  }
+
+  .osection-container {
+    width: 1340px !important;
+    margin: 0 auto !important;
+  }
+
+  .ons-special-div {
+    width: 1340px !important;
+    margin: 0 auto !important;
+  }
+
+  .main-slide {
+    width: 1340px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1380px) {
+  .ons-hero-content {
+    width: 90%;
+    margin: 0 auto;
+    
+    h1 {
+      font-size: 40px !important;
+    }
+    
+    p {
+      width: 700px;
+      font-size: 18px !important;
+    }
+  }
+
+  .osection-container {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+  
+  .ons-special-div {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .main-slide {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

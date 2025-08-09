@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Clash Grotesk', sans-serif;
+}
+
+/* topbar styling */
+.topbar {
+  background-color: #f4f5f6;
+  
+  p {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+/* video Section */
+.video {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.top-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* gradient part */
+.main-met {
+  background: linear-gradient(to bottom, #fdfefe, #e0e4e7, #fdfefe);
+}
+
+.met {
+  padding: 65px 0;
+  
+  h1 {
+    max-width: 50vw;
+    font-size: 37px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 auto 25px auto;
+  }
+  
+  p {
+    max-width: 37vw;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* green card section */
+.container-card {
+  padding: 90px 0;
+  background-color: #59b589;
+  
+  img {
+    border-radius: 15px;
+    max-width: 840px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* het section */
+.main-het {
+  background-color: #f4f5f6;
+}
+
+.container-het {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+}
+
+.step {
+  gap: 16px;
+  padding: 20px 0;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+
+  &:last-child {
+    border-bottom: 1px solid #e2e8f0;
+  }
+}
+
+.icon {
+  font-size: 18px;
+  color: #59b589;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.text {
+  h3 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 8px;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}
+
+/* last contact section */
+.main-contact {
+  background-color: #f4f5f6;
+}
+
+.contact-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 510px;
+  margin: 0 auto;
+  padding: 0 0 160px 0;
+  text-align: center;
+
+  h3 {
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}
+
+.contact-btn {
+  background-color: white;
+  color: #da7257;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 70px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid #da7257;
+  width: fit-content;
+  display: inline-block;
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* -----------------------------
+   MOBILE: up to 639px
+------------------------------ */
+@media (max-width: 639px) {
+  /* topbar */
+  .topbar p {
+    font-size: 10px;
+  }
+
+  /* video section */
+  .video {
+    min-height: 60vh;
+  }
+
+  /* gradient part */
+  .met {
+    padding: 40px 20px;
+    
+    h1 {
+      max-width: 100%;
+      font-size: 24px;
+    }
+    
+    p {
+      max-width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  /* green card section */
+  .container-card {
+    padding: 40px 20px;
+    
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  /* het section */
+  .container-het {
+    padding: 40px 20px;
+    max-width: 100%;
+    
+    h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .step {
+    padding: 15px 0;
+  }
+  
+  .text p {
+    font-size: 14px;
+  }
+
+  /* last contact section */
+  .contact-sec {
+    max-width: 80%;
+    padding: 0 0 80px 0;
+    gap: 10px;
+    
+    h3 {
+      font-size: 1.3rem;
+    }
+    
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  .contact-btn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* -----------------------------
+   TABLETS: 640px to 767px
+------------------------------ */
+@media (min-width: 640px) and (max-width: 767px) {
+  /* gradient part */
+  .met {
+    padding: 50px 40px;
+    
+    h1 {
+      max-width: 80vw;
+      font-size: 28px;
+    }
+    
+    p {
+      max-width: 70vw;
+      font-size: 16px;
+    }
+  }
+
+  /* green card section */
+  .container-card {
+    padding: 50px 40px;
+    
+    img {
+      max-width: 100%;
+    }
+  }
+
+  /* het section */
+  .container-het {
+    padding: 50px 40px;
+    max-width: 100%;
+    
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  /* last contact section */
+  .contact-sec {
+    max-width: 80%;
+    padding: 0 0 100px 0;
+    
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* -----------------------------
+   SMALL LAPTOPS: 768px to 1023px
+------------------------------ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* gradient part */
+  .met {
+    padding: 55px 60px;
+    
+    h1 {
+      max-width: 70vw;
+      font-size: 32px;
+    }
+    
+    p {
+      max-width: 60vw;
+    }
+  }
+
+  /* green card section */
+  .container-card {
+    padding: 60px 60px;
+    
+    img {
+      max-width: 100%;
+    }
+  }
+
+  /* het section */
+  .container-het {
+    padding: 60px 60px;
+    max-width: 90%;
+    
+    h2 {
+      font-size: 28px;
+    }
+  }
+
+  /* last contact section */
+  .contact-sec {
+    max-width: 510px;
+    padding: 0 0 120px 0;
+    
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1024px to 1279px
+------------------------------ */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /* gradient part */
+  .met {
+    padding: 60px 80px;
+    
+    h1 {
+      max-width: 60vw;
+    }
+    
+    p {
+      max-width: 50vw;
+    }
+  }
+
+  /* het section */
+  .container-het {
+    max-width: 650px;
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1280px..........
+------------------------------ */
+@media (min-width: 1280px) {
+  .topbar {
+    padding: 4px 0;
+    
+    p {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Clash Grotesk", sans-serif;
+}
+
+/* topbar styling */
+.topbar {
+  background-color: #f4f5f6;
+  
+  p {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  span {
+    text-decoration: underline;
+  }
+}
+
+/* text section */
+.container-text {
+  width: 100%;
+  padding: 45px 0;
+  max-width: 1340px;
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+}
+
+.updated {
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 90px;
+}
+
+.section-text {
+  width: 60%;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  ul {
+    padding-left: 20px;
+    
+    li {
+      margin-bottom: 10px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+}
+
+/* -----------------------------
+   MOBILE: up to 639px
+------------------------------ */
+@media (max-width: 639px) {
+  /* topbar */
+  .topbar p {
+    font-size: 10px;
+  }
+
+  /* text section */
+  .container-text {
+    width: 100%;
+    padding: 20px 0px;
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    h2 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  }
+
+  .updated {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  .section-text {
+    width: 100%;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    
+    p {
+      font-size: 15px; 
+    }
+    
+    ul {
+      padding-left: 18px;
+      
+      li {
+        font-size: 15px;
+        margin-bottom: 8px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+/* -----------------------------
+   TABLETS: 640px to 767px
+------------------------------ */
+@media (min-width: 640px) and (max-width: 767px) {
+  .section-text {
+    width: 100%;
+  }
+
+  /* text section */
+  .container-text {
+    padding: 30px 0px;
+    width: 95%;
+    margin: 0 auto;
+    
+    h1 {
+      font-size: 38px;
+    }
+    
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  .updated {
+    margin-bottom: 60px;
+  }
+}
+
+/* -----------------------------
+   SMALL LAPTOPS: 768px to 1023px
+------------------------------ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section-text {
+    width: 80%;
+  }
+
+  /* text section */
+  .container-text {
+    padding: 35px 0px;
+    margin: 0 auto;
+    width: 95%;
+    
+    h1 {
+      font-size: 42px;
+    }
+    
+    h2 {
+      font-size: 25px;
+    }
+  }
+
+  .section-text {
+    h3 {
+      font-size: 22px;
+    }
+    
+    p {
+      font-size: 16px;
+    }
+    
+    ul li {
+      font-size: 16px;
+    }
+  }
+
+  .updated {
+    margin-bottom: 75px;
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1024px to 1279px
+------------------------------ */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .section-text {
+    width: 80%;
+  }
+
+  /* text section */
+  .container-text {
+    padding: 35px 0px;
+    
+    h1 {
+      font-size: 42px;
+    }
+    
+    h2 {
+      font-size: 25px;
+    }
+  }
+
+  .section-text {
+    h3 {
+      font-size: 23px;
+    }
+    
+    p {
+      font-size: 17px;
+    }
+    
+    ul li {
+      font-size: 17px;
+    }
+  }
+
+  .updated {
+    margin-bottom: 75px;
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1280px..........
+------------------------------ */
+@media (min-width: 1280px) {
+  .topbar {
+    padding: 4px 0;
+    
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 1380px) and (max-width: 4000px) {
+  .container-text {
+    width: 1340px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1380px) {
+  .container-text {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+}

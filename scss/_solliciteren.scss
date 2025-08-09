@@ -1,0 +1,401 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Clash Grotesk', sans-serif;
+}
+
+/* topbar styling */
+.topbar {
+  background-color: #f4f5f6;
+  
+  p {
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+/* form section */
+.container-form-new {
+  padding: 50px 0 50px 194px;
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+  flex-wrap: wrap;
+
+  .form-section-new,
+  .info-section-new {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .form-section-new {
+    max-width: 450px;
+
+    h2 {
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .row-new {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .field-new {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .colour-star {
+    color: #c03f1f;
+    font-size: 20px;
+    margin-right: 2px;
+  }
+
+  label {
+    font-weight: 500;
+  }
+
+  input::placeholder {
+    font-weight: 500;
+  }
+
+  .field-new input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 70px;
+  }
+
+  .field-new textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 70px;
+  }
+
+  .new-field p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .file-upload {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    border: 1px solid #e9542c;
+    border-radius: 999px;
+    background-color: #fff;
+    color: #e9542c;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 70%;
+      color: #e9542c;
+    }
+
+    input {
+      display: none;
+    }
+
+    img {
+      margin-right: 8px;
+      fill: currentColor;
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    label {
+      position: relative;
+      padding-left: 28px;
+      font-weight: 400;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 14px;
+        height: 14px;
+        border: 2px solid #e9542c;
+        border-radius: 50%;
+        background-color: white;
+      }
+    }
+
+    input[type="checkbox"]:checked + label::after {
+      content: '✔';
+      position: absolute;
+      left: 0px;
+      top: 3px;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: #e9542c;
+      font-size: 12px;
+      pointer-events: none;
+    }
+  }
+
+  .btn-new {
+    padding: 10px 20px;
+    background-color: #e9542c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .info-section-new {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    .right-text-new {
+      padding: 0 194px 0 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      h2 {
+        font-weight: 500;
+      }
+
+      p {
+        font-weight: 400;
+        line-height: 1.6;
+      }
+    }
+
+    .right-btn-new {
+      padding: 10px 20px;
+      background-color: white;
+      color: #e9542c;
+      border: 1px solid #e9542c;
+      border-radius: 20px;
+      cursor: pointer;
+      width: fit-content;
+      font-weight: 500;
+
+      &:hover {
+        background-color: #e9542c;
+        color: white;
+      }
+    }
+  }
+
+  .image-new {
+    float: right;
+    margin-top: 30px;
+    width: 100%;
+    height: 420px;
+    opacity: 0.5;
+  }
+}
+
+/* -----------------------------
+   MOBILE: up to 639px
+------------------------------ */
+@media (max-width: 639px) {
+  /* topbar */
+  .topbar p {
+    font-size: 10px;
+  }
+
+  /* form section */
+  .container-form-new {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .form-section-new,
+    .info-section-new {
+      width: 100%;
+    }
+
+    .row-new {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .info-section-new {
+      gap: 40px;
+    }
+
+    .right-text-new {
+      padding: 0;
+    }
+
+    .image-new {
+      width: 100%;
+      height: auto;
+      opacity: 0.5;
+      margin-top: 20px;
+    }
+  }
+}
+
+/* -----------------------------
+   TABLETS: 640px to 767px
+------------------------------ */
+@media (min-width: 640px) and (max-width: 767px) {
+  /* form section */
+  .container-form-new {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .form-section-new,
+    .info-section-new {
+      width: 100%;
+      max-width: none;
+    }
+
+    .row-new {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .info-section-new {
+      gap: 40px;
+    }
+
+    .right-text-new {
+      padding: 0;
+    }
+
+    .image-new {
+      width: 100%;
+      height: auto;
+      opacity: 0.5;
+      margin-top: 20px;
+    }
+  }
+}
+
+/* -----------------------------
+   SMALL LAPTOPS: 768px to 1023px
+------------------------------ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* form section */
+  .container-form-new {
+    padding: 50px 0 50px 60px;
+    flex-direction: row;
+    gap: 60px;
+
+    .form-section-new {
+      max-width: 400px;
+    }
+
+    .info-section-new {
+      gap: 80px;
+    }
+
+    .right-text-new {
+      padding: 0 60px 0 0;
+    }
+
+    .image-new {
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1024px to 1279px
+------------------------------ */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /* form section */
+  .container-form-new {
+    padding: 50px 0 50px 80px;
+    flex-direction: row;
+    gap: 120px;
+
+    .form-section-new {
+      max-width: 450px;
+    }
+
+    .info-section-new {
+      gap: 100px;
+    }
+
+    .right-text-new {
+      padding: 0 80px 0 0;
+    }
+
+    .image-new {
+      height: 350px;
+    }
+  }
+}
+
+/* -----------------------------
+   DESKTOP: 1280px..........
+------------------------------ */
+@media (min-width: 1280px) {
+  .topbar {
+    padding: 4px 0;
+    
+    p {
+      font-size: 18px;
+    }
+  }
+}
